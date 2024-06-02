@@ -21,7 +21,12 @@ export default function AddButton({ handleClickModalOpen }) {
 
   return (
     <div className={classes.root}>
-      <Tooltip arrow placement="top" TransitionComponent={Zoom} title="Adicionar novo usuário">
+      <Tooltip
+        arrow
+        placement="top"
+        TransitionComponent={Zoom}
+        title="Adicionar novo usuário"
+      >
         <Fab color="primary" variant="extended" onClick={handleClickModalOpen}>
           <PersonAddIcon className={classes.extendedIcon} />
           Adicionar

@@ -99,92 +99,7 @@ export default function PersistentDrawerLeft() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const [modalOpen, setModalOpen] = React.useState(false);
-  const [userList, setUserList] = React.useState([
-    {
-      foto: null,
-      nome: "André",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-    {
-      foto: null,
-      nome: "André",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-    {
-      foto: null,
-      nome: "André",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-    {
-      foto: null,
-      nome: "André",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-    {
-      foto: null,
-      nome: "José",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-    {
-      foto: null,
-      nome: "Joe",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-    {
-      foto: null,
-      nome: "Mario",
-      idade: "36",
-      cpf: "22222222222",
-      email: "andre@email.com",
-      telefone: "99999-9999",
-      genero: "masculino",
-      endereco: "Rua das pedras, 22",
-      nascimento: "30/12/1987",
-      status: "Ativado",
-    },
-  ]);
+  const [userList, setUserList] = React.useState([]);
 
   const iconToRender = {
     Clubes: <SecurityIcon />,
@@ -209,7 +124,7 @@ export default function PersistentDrawerLeft() {
   };
 
   const handleModalSave = (userObj) => {
-    setUserList([userObj]);
+    setUserList((prev) => [userObj, ...prev]);
     setModalOpen(false);
   };
 
@@ -240,7 +155,7 @@ export default function PersistentDrawerLeft() {
             height={50}
             alt="Federação Paulista de Futebol"
           />
-          <Typography variant="h6">Federação Paulista de Futebol</Typography>
+          <Typography variant="h5">Federação Paulista de Futebol</Typography>
         </Toolbar>
       </AppBar>
       <Drawer

@@ -107,7 +107,11 @@ export default function AddModal({
             id="genero"
             label="Gênero"
             select
-            onChange={(event) => handleChangeUserInfo(event)}
+            onChange={(event) =>
+              handleChangeUserInfo({
+                target: { value: event.target.value, id: "genero" },
+              })
+            }
           >
             {genderOptions.map((option) => (
               <MenuItem key={option.value} value={option.value}>
